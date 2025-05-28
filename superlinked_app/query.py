@@ -37,8 +37,6 @@ query = (
             name_space: sl.Param("name_weight", description=name_description),
             ingredients_space: sl.Param("ingredients_weight", description=ingredients_description),
             instructions_space: sl.Param("instructions_weight", description=instructions_description),
-            # category_space: sl.Param("category_weight", description=category_description),
-            # cuisine_space: sl.Param("cuisine_weight", description=cuisine_description),
             rating_space: sl.Param("rating_weight", description=rating_description),
             prep_time_space: sl.Param("prep_time_weight", description=prep_time_description),
             cook_time_space: sl.Param("cook_time_weight", description=cook_time_description),
@@ -137,14 +135,6 @@ for filter_item in filters:
     query = query.filter(filter_item.operator(param))
 
 
-
-
-# Nutrition filter example (basic implementation)
-# # Note: This assumes Nutrition is stored as a dictionary
-# if hasattr(recipe_schema, "Nutrition"):
-#     query = query.filter(
-#         recipe_schema.Nutrition["calories"] <= sl.Param("max_calories")
-#     )
 
 # Natural language query interface
 query = query.with_natural_query(

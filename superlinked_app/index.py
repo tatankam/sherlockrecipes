@@ -58,15 +58,7 @@ instructions_space = sl.TextSimilaritySpace(
     model=settings.text_embedder_name,
 )
 
-# Semantic space for category and cuisine
-# category_space = sl.TextSimilaritySpace(
-#     text=recipe_schema.Category,
-#     model=settings.text_embedder_name,
-# )
-# cuisine_space = sl.TextSimilaritySpace(
-#     text=recipe_schema.Cuisine,
-#     model=settings.text_embedder_name,
-# )
+
 
 # Number spaces for ratings and times
 rating_space = sl.NumberSpace(
@@ -111,8 +103,6 @@ index = sl.Index(
         name_space,
         ingredients_space,
         instructions_space,
-    #    category_space,
-    #    cuisine_space,
         rating_space,
         prep_time_space,
         cook_time_space,
