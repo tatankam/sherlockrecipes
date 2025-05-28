@@ -43,6 +43,8 @@ See notebook dataset.ipynb
 
 ## AI Model
 https://huggingface.co/numind/NuExtract-1.5
+To Do
+Because I have no access to openai I will plan to use a local LLM to classify natural query tpo json
 
 ### Customizing the superlinked_app folder
 
