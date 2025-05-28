@@ -1,0 +1,3 @@
+.venv*
+superlinked_app/__pycache__
+superlinked_app/.env
