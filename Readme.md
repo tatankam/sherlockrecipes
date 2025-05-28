@@ -41,10 +41,6 @@ Thank you for understanding!
 See notebook dataset.ipynb
 
 
-## AI Model
-https://huggingface.co/numind/NuExtract-1.5
-To Do
-Because I have no access to openai I will plan to use a local LLM to classify natural query tpo json
 
 ### Customizing the superlinked_app folder
 
@@ -82,7 +78,7 @@ curl -X 'POST' \
   -d ''
 ```
 Please wait until the ingestion is finished. You will see the message.
-Because for 500 recipes the payload is bigger than 32MB, I decided to split as exaplained in the dataset_loading.ipynb
+Because for 300 recipes the payload is bigger than 32MB, I decided to split as exaplained in the dataset_loading.ipynb
 
 
 
