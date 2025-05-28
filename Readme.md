@@ -117,20 +117,26 @@ curl -X 'POST' \
 
 Because the number of recipes the payload was bigger than 32MB, I decided to split as exaplained in the dataset_loading.ipynb
 
-## Dataset Preparation
+## Dataset
 
-### Dataset
-#### Dataset License Notice ⚠️
+### 📄 Dataset License
 
-The dataset used in this project is sourced from [https://zenodo.org/records/15169428](https://zenodo.org/records/15169428).
+The original recipe dataset used in this project is sourced from:
 
-**Important:**  
-The license type for this dataset is not explicitly stated on the Zenodo page.  
-Before using, redistributing, or modifying the dataset, please verify the license terms directly on the dataset page or contact the dataset authors to ensure compliance with their usage policies.
+**[Food.com Recipes and Interactions Dataset (Kaggle)](https://zenodo.org/record/15169428)**  
+Zenodo Record ID: [15169428](https://zenodo.org/record/15169428)
 
-This project assumes proper attribution and respect for any license or usage restrictions associated with the dataset.
+**License:** [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
 
-Thank you for understanding!
+You are free to:
+- **Share** — copy and redistribute the material in any medium or format
+- **Adapt** — remix, transform, and build upon the material for any purpose, even commercially
+
+**Under the following terms:**
+- **Attribution** — You must give appropriate credit, provide a link to the license, and indicate if changes were made.
+
+> This project uses a cleaned and truncated subset (first 300–500 rows) of the original dataset for development and demonstration purposes.
+
 
 
 ## Preparing the Recipe Dataset — `dataset_loading.ipynb`
