@@ -94,10 +94,11 @@ These modules collectively build a customizable, semantic recipe search engine p
 
 ### Superlinked server
 
-Use [`superlinked_app/.env-example`](./superlinked_app/.env-example) as a template, create `superlinked_app/.env` and set `OPENAI_API_KEY` required for Natural Query Interface, `QDRANT_URL` and `QDRANT_API_KEY` required for Qdrant Vector Database.
+Use [`superlinked_app/.env-example`](./superlinked_app/.env-example) as a template, create `superlinked_app/.env` and set `OPENAI_API_KEY` required for Natural Query Interface, `QDRANT_URL` , `QDRANT_API_KEY`, `QDRANT_TIMEOUT` required for Qdrant Vector Database.
+I introduced timeout parameter because in the first version of my loader I hade issue about the process.
 
 ```shell
-python3.11 -m venv .venv
+python3.12.3 -m venv .venv
 . .venv/bin/activate
 pip install -r requirements.txt
 APP_MODULE_PATH=superlinked_app python -m superlinked.server
