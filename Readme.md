@@ -95,7 +95,7 @@ These modules collectively build a customizable, semantic recipe search engine p
 ### Superlinked server
 
 Use [`superlinked_app/.env-example`](./superlinked_app/.env-example) as a template, create `superlinked_app/.env` and set `OPENAI_API_KEY` required for Natural Query Interface, `QDRANT_URL` , `QDRANT_API_KEY`, `QDRANT_TIMEOUT` required for Qdrant Vector Database.
-I introduced timeout parameter because in the first version of my loader I hade issue about the process.
+I introduced timeout parameter because in the first version of my loader I had issue about the process.
 
 ```shell
 python3.12.3 -m venv .venv
