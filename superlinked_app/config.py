@@ -12,6 +12,7 @@ class Settings(BaseSettings):
     path_categories: str = ("../dataset/categories.json")
     path_dataset: str = ("../dataset/dataset_ok.jsonl")
     openai_model: str = "gpt-4o"
+    open_ai_base_url: str = "https://api.openai.com/v1"
     openai_api_key: SecretStr
     qdrant_url: str = "https://582c83bf-e97f-401a-9ff7-8480522f5e88.europe-west3-0.gcp.cloud.qdrant.io"
     qdrant_api_key: str = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2Nlc3MiOiJtIn0.0hEkwzpfBRRQxXnDky4G0Hiuou6yfnWmvATWODEnVnM"
