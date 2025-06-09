@@ -278,3 +278,59 @@ This notebook is designed as a development companion for:
 - Exploring how individual fields contribute to final search rankings
 
 It is a key tool for developers working on search quality, schema design, and interactive debugging within the `superlinked` recipe search system.
+
+## 🧩 Support for Custom OpenAI-Compatible LLM Endpoints
+
+To increase flexibility and support alternative OpenAI-compatible LLM providers (such as local Ollama instances, OpenRouter, or other inference services), this project introduces additional configuration and custom modules that allow you to easily switch the LLM backend without modifying core logic.
+
+### ✨ What’s New?
+
+- **⚙️ Custom Configuration Field**  
+  The `Settings` class in `superlinked_app/config.py` has been extended with new fields:
+
+
+
+openai_model: str = "gpt-4o"
+open_ai_base_url: str = "https://api.openai.com/v1"
+
+
+This allows you to specify both the model and the base URL of the OpenAI-compatible API endpoint.
+
+- **🛠️ Custom Modules**  
+Two new modules replicate and extend the default logic to support the configurable endpoint:
+- `nlq_cust.py` — Custom version of the natural language query logic that uses `open_ai_base_url` for API calls.
+- `search_cust.py` — Custom search/query module that integrates with the new NLQ logic.
+
+- **📓 Testing Notebook**  
+The notebook `superlinked_qdrant_recipes_cust.ipynb` demonstrates how to query and test the system using the custom LLM endpoint setup.
+
+### 🚀 How to Use
+
+1. **Configure your `.env` file** with your preferred OpenAI-compatible provider credentials and endpoint, for example:
+
+
+
+OPENAI_API_KEY=your-api-key-from-openrouter
+OPENAI_MODEL=qwen/qwen-2.5-72b-instruct
+OPEN_AI_BASE_URL=https://openrouter.ai/api/v1
+
+
+
+2. **Run queries using the custom modules or the notebook** to interact with your chosen LLM backend seamlessly.
+
+### 💡 Why This Matters
+
+- Enables **plug-and-play support** for any OpenAI-compatible LLM API without changing the core codebase.
+- Supports **local inference providers** like Ollama or self-hosted APIs.
+- Facilitates experimentation with emerging LLM providers such as OpenRouter.
+- Keeps your project future-proof and flexible for diverse deployment scenarios.
+
+---
+
+This enhancement empowers you to easily switch between OpenAI and alternative LLM providers by simply adjusting environment variables and using the custom modules provided.
+
+For detailed usage, see the `superlinked_qdrant_recipes_cust.ipynb` notebook included in the repository.
+
+
+
+

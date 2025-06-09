@@ -14,7 +14,6 @@ openai_config = OpenAI(
 
 
 MODEL_NAME=settings.openai_model
-#"qwen/qwen-2.5-72b-instruct:free"
 
 def get_cat_options() -> dict[list[str]]:
     """
