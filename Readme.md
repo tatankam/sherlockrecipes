@@ -286,15 +286,12 @@ To increase flexibility and support alternative OpenAI-compatible LLM providers 
 ### ✨ What’s New?
 
 - **⚙️ Custom Configuration Field**  
-  The `Settings` class in `superlinked_app/config.py` has been extended with new fields:
+  The `Settings` class in `superlinked_app/config.py` has been extended with:
+
+  open_ai_base_url: str = "https://api.openai.com/v1"
 
 
-
-openai_model: str = "gpt-4o"
-open_ai_base_url: str = "https://api.openai.com/v1"
-
-
-This allows you to specify both the model and the base URL of the OpenAI-compatible API endpoint.
+  This allows you to specify both the model and the base URL of the OpenAI-compatible API endpoint.
 
 - **🛠️ Custom Modules**  
 Two new modules replicate and extend the default logic to support the configurable endpoint:
@@ -307,9 +304,6 @@ The notebook `superlinked_qdrant_recipes_cust.ipynb` demonstrates how to query a
 ### 🚀 How to Use
 
 1. **Configure your `.env` file** with your preferred OpenAI-compatible provider credentials and endpoint, for example:
-
-
-
 OPENAI_API_KEY=your-api-key-from-openrouter
 OPENAI_MODEL=qwen/qwen-2.5-72b-instruct
 OPEN_AI_BASE_URL=https://openrouter.ai/api/v1
