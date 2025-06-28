@@ -7,7 +7,10 @@ from superlinked_app.config import settings
 openai_config = sl.OpenAIClientConfig(
     api_key=settings.openai_api_key.get_secret_value(),
     model=settings.openai_model,
+    base_url=settings.open_ai_base_url,
 )
+
+
 
 def get_cat_options() -> dict[list[str]]:
     """

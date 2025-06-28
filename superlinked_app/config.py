@@ -9,8 +9,8 @@ DEFAULT_ENV_FILENAME = ".env"
 class Settings(BaseSettings):
     text_embedder_name: str = "sentence-transformers/all-mpnet-base-v2"
     chunk_size: int = 1000
-    path_categories: str = ("../dataset/categories.json")
-    path_dataset: str = ("../dataset/dataset_ok.jsonl")
+    path_categories: str = ("./dataset/categories.json")
+    path_dataset: str = ("./dataset/dataset_ok.jsonl")
     openai_model: str = "gpt-4o"
     open_ai_base_url: str = "https://api.openai.com/v1"
     openai_api_key: SecretStr

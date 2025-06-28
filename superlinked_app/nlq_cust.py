@@ -3,7 +3,7 @@ from openai import OpenAI  # Use OpenAI's official client for local endpoints
 
 from superlinked_app.config import settings
 from superlinked import framework as sl
-
+#from openai import AsyncOpenAI
 
 
 openai_config = OpenAI(
