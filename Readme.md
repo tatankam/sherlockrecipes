@@ -101,8 +101,9 @@ I introduced timeout parameter because in the first version of my loader I had a
 python3.12.3 -m venv .venv
 . .venv/bin/activate
 pip install -r requirements.txt
-APP_MODULE_PATH=superlinked_app python -m superlinked.server
+APP_ID=sherlockrecipes APP_MODULE_PATH=superlinked_app python -m superlinked.server
 ```
+So I will create the Qdrant collection sherlockrecipes
 
 It will take some time (depending on the network) to download the sentence-transformers model for the very first time.
 
