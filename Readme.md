@@ -318,14 +318,18 @@ OPEN_AI_BASE_URL=https://openrouter.ai/api/v1
 - Enables **plug-and-play support** for any OpenAI-compatible LLM API without changing the core codebase.
 - Supports **local inference providers** like Ollama or self-hosted APIs.
 - Facilitates experimentation with emerging LLM providers such as OpenRouter.
-- Keeps your project future-proof and flexible for diverse deployment scenarios.
+- Keeables and using the custom modules provided.
+
+For ps your project future-proof and flexible for diverse deployment scenarios.
 
 ---
 
-This enhancement empowers you to easily switch between OpenAI and alternative LLM providers by simply adjusting environment variables and using the custom modules provided.
-
-For detailed usage, see the `superlinked_qdrant_recipes_cust.ipynb` notebook included in the repository.
+This enhancement empowers you to easily switch between OpenAI and alternative LLM providers by simply adjusting environment varidetailed usage, see the `superlinked_qdrant_recipes_cust.ipynb` notebook included in the repository.
 
 
+
+### 🛠️ Project Update – June 2025
+
+- In **June 2025**, I updated the project to leverage the latest **Superlinked upgrade**, allowing the use of standard `nlq` and `query` endpoints with a custom `OPENAI_BASE_URL` — eliminating the need for `nlq_cust` and `search_cust`.
 
 
